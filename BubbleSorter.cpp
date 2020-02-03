@@ -2,22 +2,7 @@
 //
 
 #include <iostream>
-class A
-{
-protected:
-	virtual void run()
-	{
-		init(); // Инициализация
-		while (isDone())
-			idle(); // Чтото делаем на каждой итерации цикла
-		cleanup(); // Освобождаем ресурсы
-	}
-	// Чистые виртуальные функции
-	virtual void init() = 0;
-	virtual bool isDone() = 0;
-	virtual void idle() = 0;
-	virtual void cleanup() = 0;
-};
+
 // Астрактный класс для сортировки пузырьком (тип элемента массива не известен)
 class BubbleSorter
 {
